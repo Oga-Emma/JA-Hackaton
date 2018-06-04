@@ -16,6 +16,10 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import org.ja_nigeria.janigeria.fragments.DashBoardFragment
 import org.ja_nigeria.janigeria.fragments.NotificationFragment
 
+import org.ja_nigeria.janigeria.courses.CoursesActivity
+import org.ja_nigeria.janigeria.program.ProgramFragment
+import org.ja_nigeria.janigeria.program.ProgramFragmentJ
+
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
         DashBoardFragment.TabLayoutSetupCallback, NotificationFragment.TabLayoutSetupCallbackNotifications {
 
@@ -35,11 +39,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         tabLayout.setupWithViewPager(viewPager)
     }
-import org.ja_nigeria.janigeria.courses.CoursesActivity
-import org.ja_nigeria.janigeria.program.ProgramFragment
-import org.ja_nigeria.janigeria.program.ProgramFragmentJ
-
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

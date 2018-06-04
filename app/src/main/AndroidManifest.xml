@@ -12,6 +12,13 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".courses.CoursesActivity"
@@ -22,12 +29,6 @@
             android:name=".courses.CoursePreviewActivity"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".course_content.CourseContentActivity">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <meta-data
