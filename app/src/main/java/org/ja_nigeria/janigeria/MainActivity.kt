@@ -1,5 +1,6 @@
 package org.ja_nigeria.janigeria
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.design.widget.TabLayout.GRAVITY_FILL
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         tabLayout.setupWithViewPager(viewPager)
     }
+import org.ja_nigeria.janigeria.courses.CoursesActivity
+import org.ja_nigeria.janigeria.program.ProgramFragment
+import org.ja_nigeria.janigeria.program.ProgramFragmentJ
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,8 +104,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 tab_layout.visibility = View.VISIBLE
                 toolbar.title = getString(R.string.notifications)
             }
-            R.id.nav_send -> {
-
+            R.id.nav_courses -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ProgramFragmentJ())
+                        .commit()
             }
         }
 
