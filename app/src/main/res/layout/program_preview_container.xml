@@ -57,8 +57,8 @@
             android:paddingRight="16dp"
             android:paddingTop="8dp"
             android:text="6 WEEKS"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="20sp"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -80,7 +80,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button">
@@ -99,19 +99,21 @@
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="About the Program"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4sp"
                         android:paddingBottom="@dimen/padding_8dp"
                         android:paddingLeft="@dimen/padding_16"
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="JA Our Nation introduces  students to the intersection of work readiness and upper elementary grades social studies learning objectives. Through hands-on classroom activities, the program provides students with practical information about the nation’s free market system and how it serves as an economic engine for businesses and careers. The curriculum also introduces the need for entrepreneurial and innovative thinking to meet the requirements of high-growth, high-demand careers and the concept of globalization in business."
-                        android:textSize="12sp" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -122,7 +124,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button">
@@ -141,19 +143,21 @@
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Program Grade Level"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4sp"
                         android:paddingBottom="@dimen/padding_8dp"
                         android:paddingLeft="@dimen/padding_16"
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Elementary School (Primary 4, Primary 5, Primary 6)"
-                        android:textSize="12sp" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -164,7 +168,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button">
@@ -183,19 +187,21 @@
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Program Implementation"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4sp"
                         android:paddingBottom="@dimen/padding_8dp"
                         android:paddingLeft="@dimen/padding_16"
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Classroom-Based"
-                        android:textSize="12sp" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -206,7 +212,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button">
@@ -225,19 +231,21 @@
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Program Concepts"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4sp"
                         android:paddingBottom="@dimen/padding_8dp"
                         android:paddingLeft="@dimen/padding_16"
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Businesses, careers, career clusters, collaboration, communication, competition, competitor, consumer, critical thinking, engineering, employees, employers, entrepreneur, free market economy, global economy, goods and services, human capital, innovation, invention, interdependence, job specialization, opportunity cost, product, producer, profit, resume, skills, technology, work readiness"
-                        android:textSize="12sp" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -248,7 +256,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button">
@@ -267,19 +275,20 @@
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Program Skills"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4sp"
                         android:paddingBottom="@dimen/padding_8dp"
                         android:paddingLeft="@dimen/padding_16"
                         android:paddingRight="@dimen/padding_16"
                         android:paddingTop="@dimen/padding_8dp"
                         android:text="Analyzing occupations, analyzing information, brainstorming, creative thinking, collaboration, communication, decision making, estimating, following written instructions, interpersonal skills, interpreting economic issues, map reading, organizing information, prioritizing, problem solving, reasoning, speaking and listening, STEM skills, teamwork, working cooperatively, working in pairs, written communication."
-                        android:textSize="12sp" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
