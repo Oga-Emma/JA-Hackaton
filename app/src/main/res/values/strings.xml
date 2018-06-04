@@ -6,4 +6,16 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="messages">Messages</string>
+    <string name="course_materials">Course materials</string>
+    <string name="downloads">Downloads</string>
+    <string name="enrolled">Enrolled</string>
+    <string name="explore">Explore</string>
+    <string name="notifications">Notifications</string>
+    <string name="announcements">Anouncements</string>
+    <string name="no_courses_enrolled">You haven\'t enrolled in any Courses.\\n\\tGet enrolled in some Courses</string>
 </resources>

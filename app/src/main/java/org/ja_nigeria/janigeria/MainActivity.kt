@@ -1,21 +1,44 @@
 package org.ja_nigeria.janigeria
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.design.widget.TabLayout.GRAVITY_FILL
 import android.support.v4.view.GravityCompat
+import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.ja_nigeria.janigeria.fragments.DashBoardFragment
+import org.ja_nigeria.janigeria.fragments.NotificationFragment
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
+        DashBoardFragment.TabLayoutSetupCallback, NotificationFragment.TabLayoutSetupCallbackNotifications {
+
+
+    override fun setupNotificationTabLayout(viewPager: ViewPager?) {
+        var tabLayout = tab_layout
+
+        tabLayout.tabGravity = GRAVITY_FILL
+
+        tabLayout.setupWithViewPager(viewPager)
+    }
+
+    override fun setupTabLayout(viewPager: ViewPager?) {
+        var tabLayout = tab_layout
+
+        tabLayout.tabGravity = GRAVITY_FILL
+
+        tabLayout.setupWithViewPager(viewPager)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        toolbar.title = getString(R.string.dashboard)
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
@@ -24,6 +47,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.container, DashBoardFragment.newInstance())
+                .commit()
+        tab_layout.visibility = View.VISIBLE
+
     }
 
     override fun onBackPressed() {
@@ -54,8 +83,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
 
-            R.id.nav_share -> {
+            R.id.nav_dashboard -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, DashBoardFragment.newInstance())
+                        .commit()
+                toolbar.title = getString(R.string.dashboard)
+                tab_layout.visibility = View.VISIBLE
+            }
 
+            R.id.nav_notifications -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, NotificationFragment.newInstance())
+                        .commit()
+                tab_layout.visibility = View.VISIBLE
+                toolbar.title = getString(R.string.notifications)
             }
             R.id.nav_send -> {
 
