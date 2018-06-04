@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Messages" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_courses"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Course materials" />
+            android:title="Courses" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

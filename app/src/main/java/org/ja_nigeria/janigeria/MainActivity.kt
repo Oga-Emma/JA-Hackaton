@@ -1,5 +1,6 @@
 package org.ja_nigeria.janigeria
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -10,6 +11,10 @@ import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+
+import org.ja_nigeria.janigeria.courses.CoursesActivity
+import org.ja_nigeria.janigeria.program.ProgramFragment
+import org.ja_nigeria.janigeria.program.ProgramFragmentJ
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -57,8 +62,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_share -> {
 
             }
-            R.id.nav_send -> {
-
+            R.id.nav_courses -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ProgramFragmentJ())
+                        .commit()
             }
         }
 
