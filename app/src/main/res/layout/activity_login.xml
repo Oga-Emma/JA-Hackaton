@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <include layout="@layout/app_bar_main"/>
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="52dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="40dp">
+
+        <ImageView
+            android:id="@+id/logo_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/ja_nigeria_logo"
+            tools:ignore="ContentDescription" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColor="@color/blackOpac"
+                android:hint="@string/email"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:passwordToggleDrawable="@drawable/password_visibility_drawable"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimaryDark">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:inputType="textPassword"
+                android:textColor="@color/blackOpac"
+                android:hint="@string/password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/transparent_button_login_background"
+            android:text="SIGN IN"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

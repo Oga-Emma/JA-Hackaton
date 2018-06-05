@@ -19,4 +19,10 @@
     <string name="announcements">Anouncements</string>
     <string name="no_courses_enrolled">You haven\'t enrolled in any Courses.\\n\\tGet enrolled in some Courses</string>
     <string name="no_announcements_made">No Broadcasted Announcements today</string>
+    <string name="title_activity_auth">AuthActivity</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_twitter">Sign in with Twitter</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
