@@ -21,6 +21,7 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
     private Button facebookSignIn;
     private Button twitterSignIn;
     private TextView signInTextView;
+    private Button signInWithJa;
     private ImageView logo;
     Animation animation;
 
@@ -37,10 +38,12 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
         twitterSignIn = findViewById(R.id.sign_in_with_twitter_button);
         logo = findViewById(R.id.logo_view);
         signInTextView = findViewById(R.id.signInTextView);
+        signInWithJa = findViewById(R.id.sign_in_with_ja_button);
         googleSignIn.setOnClickListener(this);
         facebookSignIn.setOnClickListener(this);
         twitterSignIn.setOnClickListener(this);
         signInTextView.setOnClickListener(this);
+        signInWithJa.setOnClickListener(this);
 
         animation = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
         animation.setDuration(3000);
@@ -54,11 +57,15 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == R.id.signInTextView){
+        if (v.getId() == R.id.signInTextView) {
 
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
 
+        } else if (v.getId() == R.id.sign_in_with_ja_button) {
+
+            Intent intent = new Intent(this, SignUpActivity.class);
+            startActivity(intent);
         } else {
             Intent intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
@@ -83,6 +90,6 @@ public class AuthActivity extends AppCompatActivity implements View.OnClickListe
             }
         }).start();
 
-       // progressDialog.dismiss();
+        // progressDialog.dismiss();
     }
 }
