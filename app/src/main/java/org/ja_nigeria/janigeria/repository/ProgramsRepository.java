@@ -3,6 +3,7 @@ package org.ja_nigeria.janigeria.repository;
 import org.ja_nigeria.janigeria.model.Program;
 import org.ja_nigeria.janigeria.model.ProgramSession;
 import org.ja_nigeria.janigeria.model.ProgramsCategory;
+import org.ja_nigeria.janigeria.mvp.ProgramMVP;
 
 import java.util.ArrayList;
 import java.util.Arrays;

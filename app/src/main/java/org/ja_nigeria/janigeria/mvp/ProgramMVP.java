@@ -1,4 +1,4 @@
-package org.ja_nigeria.janigeria.repository;
+package org.ja_nigeria.janigeria.mvp;
 
 import org.ja_nigeria.janigeria.model.ProgramsCategory;
 

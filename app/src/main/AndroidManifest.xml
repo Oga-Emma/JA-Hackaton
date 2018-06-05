@@ -21,15 +21,16 @@
 
         </activity>
         <activity
-            android:name=".courses.CoursesActivity"
+            android:name="org.ja_nigeria.janigeria.features.courses.CoursesActivity"
             android:label="@string/title_activity_courses"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".courses.CoursePreviewActivity"
+            android:name="org.ja_nigeria.janigeria.features.courses.CoursePreviewActivity"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".course_content.CourseContentActivity">
 
+        <activity android:name=".features.course_content.CourseContentActivity"
+            android:parentActivityName=".MainActivity">
         </activity>
         <meta-data
             android:name="preloaded_fonts"

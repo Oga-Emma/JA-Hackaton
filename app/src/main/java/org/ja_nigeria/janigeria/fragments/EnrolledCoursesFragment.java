@@ -1,18 +1,33 @@
 package org.ja_nigeria.janigeria.fragments;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.ja_nigeria.janigeria.features.EnrolledCourses.EnrolledCoursesAdapter;
 import org.ja_nigeria.janigeria.R;
+import org.ja_nigeria.janigeria.features.course_content.CourseContentActivity;
+import org.ja_nigeria.janigeria.model.EnrolledCourse;
+import org.ja_nigeria.janigeria.repository.EnrolledCourseRepository;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EnrolledCoursesFragment extends Fragment {
+public class EnrolledCoursesFragment extends Fragment
+        implements EnrolledCoursesAdapter.OnEnrrolledCourseClickedListener{
+
+
+    private String TAG = EnrolledCoursesFragment.class.getSimpleName();
+    EnrolledCoursesAdapter adapter;
+
+    private RecyclerView enrolledCoursesRecyclerView;
 
 
     public EnrolledCoursesFragment() {
@@ -29,7 +44,22 @@ public class EnrolledCoursesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_enrolled_courses, container, false);
+        View view =  inflater.inflate(R.layout.fragment_enrolled_courses, container, false);
+
+
+        adapter = new EnrolledCoursesAdapter(EnrolledCourseRepository
+                .getInstance().getEnrolledCourses(), this);
+        enrolledCoursesRecyclerView = view.findViewById(R.id.enrolled_recycler_view);
+        enrolledCoursesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        enrolledCoursesRecyclerView.setAdapter(adapter);
+
+        return view;
     }
 
+    @Override
+    public void onEnrolledCourseClicked(EnrolledCourse enrolledCourse) {
+
+        CourseContentActivity.startActivity(enrolledCourse, getContext());
+//        startActivity(new Intent(getContext(), CourseContentActivity.class));
+    }
 }

@@ -1,4 +1,4 @@
-package org.ja_nigeria.janigeria.courses;
+package org.ja_nigeria.janigeria.features.courses;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
