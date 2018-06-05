@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
@@ -16,9 +15,9 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/noti_profile_image"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
+            android:id="@+id/message_profile_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
@@ -35,7 +34,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/announcement_message"
+                android:id="@+id/message_sender_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -44,21 +43,37 @@
                 android:textColor="@color/blackOpac"
                 android:textStyle="bold"
                 app:fontFamily="@font/roboto_medium"
-                tools:text="Valentine added to you the course JA Nation"/>
+                tools:text="Ofoegbu Valentine"/>
 
             <TextView
-                android:id="@+id/announcement_date"
+                android:id="@+id/message_body"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/text_view_small_size"
-                app:fontFamily="@font/roboto_italic"
-                tools:text="06 June, 2018"/>
+                android:textColor="@color/blackOpac"
+                android:textStyle="italic"
+                app:fontFamily="@font/roboto_medium"
+                tools:text="Hi, can you help me with ..."/>
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/message_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="0.5"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_view_small_size"
+            app:fontFamily="@font/roboto_italic"
+            tools:text="1:12PM"/>
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
