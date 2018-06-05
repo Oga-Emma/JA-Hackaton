@@ -18,4 +18,5 @@
     <string name="notifications">Notifications</string>
     <string name="announcements">Anouncements</string>
     <string name="no_courses_enrolled">You haven\'t enrolled in any Courses.\\n\\tGet enrolled in some Courses</string>
+    <string name="no_announcements_made">No Broadcasted Announcements today</string>
 </resources>
