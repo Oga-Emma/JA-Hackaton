@@ -1,4 +1,4 @@
-package org.ja_nigeria.janigeria;
+package org.ja_nigeria.janigeria.adapter;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

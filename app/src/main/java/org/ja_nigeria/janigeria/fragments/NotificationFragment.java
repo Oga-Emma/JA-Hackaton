@@ -13,13 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.ja_nigeria.janigeria.MainActivity;
-import org.ja_nigeria.janigeria.PagerAdapter;
 import org.ja_nigeria.janigeria.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="2dp"
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp"
@@ -15,16 +16,16 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
+            android:id="@+id/noti_profile_image"
             android:layout_width="70dp"
             android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
             android:src="@drawable/ic_launcher_background"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,24 +35,28 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/course_title"
+                android:id="@+id/announcement_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valentine added to you the course JA Nation"
-                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
                 android:textSize="@dimen/text_view_regular_size"
+                android:textColor="@color/blackOpac"
                 android:textStyle="bold"
-                app:fontFamily="@font/roboto_medium" />
+                app:fontFamily="@font/roboto_medium"
+                tools:text="Valentine added to you the course JA Nation"/>
 
             <TextView
+                android:id="@+id/announcement_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:textSize="@dimen/text_view_regular_size"
-                android:text="06 June, 2018"
-                app:fontFamily="@font/roboto_italic" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_view_small_size"
+                app:fontFamily="@font/roboto_italic"
+                tools:text="06 June, 2018"/>
 
         </LinearLayout>
     </LinearLayout>
