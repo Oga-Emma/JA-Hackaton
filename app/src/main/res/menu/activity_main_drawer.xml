@@ -15,20 +15,29 @@
             android:title="@string/messages" />
 
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Chat Channel" />
+
+        <item
+            android:id="@+id/nav_download"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/downloads" />
-    </group>
 
-    <group android:id="@+id/group1" android:checkableBehavior="single">
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Settings" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="FAQs" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_share"
+            android:title="My Profile" />
+
+        <item
+            android:id="@+id/nav_faqs"
+            android:icon="@drawable/ic_menu_send"
+            android:title="FAQs" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Contact us" />
     </group>
 
 </menu>

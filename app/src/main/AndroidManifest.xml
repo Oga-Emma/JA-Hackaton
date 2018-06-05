@@ -12,29 +12,37 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name="org.ja_nigeria.janigeria.features.courses.CoursesActivity"
+            android:name=".features.dashboard.explore.courses.CoursesActivity"
             android:label="@string/title_activity_courses"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="org.ja_nigeria.janigeria.features.courses.CoursePreviewActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name=".features.dashboard.explore.courses.CoursePreviewActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".features.dashboard.enrolled_courses.course_content.CourseContentActivity"
+            android:parentActivityName=".MainActivity" />
 
-        <activity android:name=".features.course_content.CourseContentActivity"
-            android:parentActivityName=".MainActivity">
-        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".features.chat_channels.discussion.DiscussionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".features.surveys.SurveyActivity"
+            android:parentActivityName=".features.dashboard.enrolled_courses.course_content.CourseContentActivity" />
+        <activity android:name=".features.download.DownloadActivity" />
+        <activity android:name=".features.ProfileActivity" />
+        <activity android:name=".features.dashboard.enrolled_courses.view_all_course_contents.ViewAllCourseContentsActivity"></activity>
     </application>
 
 </manifest>

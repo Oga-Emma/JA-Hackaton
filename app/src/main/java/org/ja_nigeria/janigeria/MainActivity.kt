@@ -1,7 +1,5 @@
 package org.ja_nigeria.janigeria
 
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.design.widget.TabLayout.GRAVITY_FILL
@@ -12,8 +10,13 @@ import android.support.v7.app.AppCompatActivity
 import android.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import org.ja_nigeria.janigeria.fragments.DashBoardFragment
-import org.ja_nigeria.janigeria.fragments.NotificationFragment
+import kotlinx.android.synthetic.main.nav_header_main.*
+import org.ja_nigeria.janigeria.features.chat_channels.ChatChannelFragment
+import org.ja_nigeria.janigeria.features.dashboard.DashBoardFragment
+import org.ja_nigeria.janigeria.features.download.DownloadFragment
+import org.ja_nigeria.janigeria.features.events.EventFragment
+import org.ja_nigeria.janigeria.features.messages.notification.NotificationFragment
+import org.ja_nigeria.janigeria.features.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
         DashBoardFragment.TabLayoutSetupCallback, NotificationFragment.TabLayoutSetupCallbackNotifications {
@@ -52,6 +55,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.container, DashBoardFragment.newInstance())
                 .commit()
         tab_layout.visibility = View.VISIBLE
+
+
+        val header = nav_view.getHeaderView(0)
+
+        header.findViewById<View>(R.id.app_bar_layout).setOnClickListener({
+            supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, ProfileFragment())
+                    .commit()
+            tab_layout.visibility = View.GONE
+            toolbar.title = "Profile"
+
+
+            drawer_layout.closeDrawer(GravityCompat.START)
+        })
+
 
     }
 
@@ -97,6 +115,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .commit()
                 tab_layout.visibility = View.VISIBLE
                 toolbar.title = getString(R.string.notifications)
+            }
+
+            R.id.nav_chat -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ChatChannelFragment.newInstance())
+                        .commit()
+                tab_layout.visibility = View.GONE
+                toolbar.title = getString(R.string.chant_channels)
+            }
+
+            R.id.nav_profile -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ProfileFragment())
+                        .commit()
+                tab_layout.visibility = View.GONE
+                toolbar.title = "Profile"
+            }
+
+            R.id.nav_download -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, DownloadFragment())
+                .commit()
+                tab_layout.visibility = View.GONE
+                toolbar.title = "Downloads"
             }
 
         }

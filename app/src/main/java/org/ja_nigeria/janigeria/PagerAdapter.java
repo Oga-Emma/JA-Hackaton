@@ -1,12 +1,11 @@
 package org.ja_nigeria.janigeria;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import org.ja_nigeria.janigeria.fragments.EnrolledCoursesFragment;
-import org.ja_nigeria.janigeria.fragments.ExploreCoursesFragment;
+import org.ja_nigeria.janigeria.features.dashboard.enrolled_courses.EnrolledCoursesFragment;
+import org.ja_nigeria.janigeria.features.dashboard.explore.ExploreCoursesFragment;
 
 import java.util.ArrayList;
 import java.util.List;
