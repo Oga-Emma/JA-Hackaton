@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:layout_marginTop="52dp"
         android:layout_centerHorizontal="true"
-        android:paddingTop="40dp">
+        android:paddingTop="20dp">
 
         <ImageView
             android:id="@+id/logo_view"
@@ -35,7 +35,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/transparent_button_background"
             android:drawablePadding="20dp"
             android:drawableStart="@drawable/ic_search"
@@ -81,6 +81,33 @@
             android:textSize="@dimen/text_view_small_size"
             tools:targetApi="lollipop" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp"
+            android:textColor="@color/blackOpac"
+            android:textSize="@dimen/text_view_regular_size"
+            android:text="or"/>
+
+        <Button
+            android:id="@+id/sign_in_with_ja_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/transparent_button_background"
+            android:drawablePadding="20dp"
+            android:drawableStart="@drawable/ja"
+            android:elevation="10dp"
+            android:padding="@dimen/content_padding"
+            android:text="Create a JA Account"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_view_small_size"
+            tools:targetApi="lollipop" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -103,6 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign In"
+            android:padding="@dimen/activity_horizontal_margin"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/text_view_regular_size"
             app:fontFamily="@font/roboto_bold_italic" />
